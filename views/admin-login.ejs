@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .admin-form-group { margin-bottom: 20px; }
+        .admin-label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .admin-input { width: 100%; padding: 12px; background: #1e293b; border: 1px solid #1f2937; border-radius: 6px; color: #fff; font-size: 1rem; }
+        .admin-btn { background: #38bdf8; color: #0f172a; border: none; padding: 12px; font-weight: 600; border-radius: 6px; cursor: pointer; width: 100%; }
+        .admin-btn:hover { background: #7dd3fc; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Olansile<span>.admin</span></h1>
+            <nav><a href="/">&larr; Back to Portfolio</a></nav>
+        </div>
+    </header>
+    <main style="max-width: 500px; margin: 100px auto 0 auto;">
+        <div class="card">
+            <h3 class="section-title">Secure Portal Access</h3>
+            <% if (typeof error !== 'undefined') { %>
+                <p style="color: #ef4444; margin-bottom: 15px;"><%= error %></p>
+            <% } %>
+            <form action="/admin/login" method="POST">
+                <div class="admin-form-group">
+                    <label class="admin-label">Access Token Password</label>
+                    <input type="password" name="password" class="admin-input" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="admin-btn">Authenticate &rarr;</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

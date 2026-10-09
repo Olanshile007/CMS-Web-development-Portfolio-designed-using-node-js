@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR HEADER -->
+    <header>
+        <div class="nav-container">
+            <h1>Olan<span>sile.</span></h1>
+            <nav><a href="/">&larr; Back to Portfolio</a></nav>
+        </div>
+    </header>
+
+    <!-- MAIN DYNAMIC CONTENT BOX CONTAINER -->
+    <main style="max-width: 100%; padding: 0 15px;">
+        <div class="article-page-card">
+            
+            <!-- Dynamic Post Header Banner Image Cover Box -->
+            <div style="width: 100%; height: clamp(200px, 40vh, 380px); background: #1e293b;">
+                <img src="<%= thumbnail %>" style="width: 100%; height: 100%; object-fit: cover;" alt="Technical Post Banner">
+            </div>
+
+            <!-- Pre-rendered Text Elements Wrapper Block -->
+            <div class="article-body-wrapper">
+                <article class="markdown-body">
+                    <%- content %>
+                </article>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="margin-top: 100px;">
+        <p>&copy; 2026 Olansile. All Technical Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
